@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .arr0{
+      color: red;
+    }
+    .arr1{
+      color: yellowgreen;
+      margin-left: 20px;
+    }
+    .arr2{
+      color: rgb(134, 134, 134);
+      margin-left: 40px;
+    }
+    .arr3{
+      color: orange;
+      margin-left: 20px;
+    }
+    .arr4{
+      color: blueviolet;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <ul>
+        <li v-for="(arr,i) in json.data" class="arr0">
+          <div>{{i}}</div>
+          <div v-for="(arr1,i) in arr" class="arr1">
+            <div class="arr1list">{{arr1.elementName}}</div>
+            <div v-for="(arr2,i) in arr1.childElements" class="arr2">
+              <div>{{arr2.elementName}}</div>
+              <div v-for="(arr3,i) in arr2.childElements" class="arr3">
+                <div>{{arr3.elementName}}</div>
+                <div v-for="(arr4,i) in arr3.childElements" class="arr4">
+                  <div>{{arr4.elementName}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="arr1list"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <script src="vue.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
