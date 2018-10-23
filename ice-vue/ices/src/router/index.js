@@ -5,6 +5,7 @@ import Form from '../pages/Form';
 import Echarts from '../pages/Echarts';
 import VuexPage from '../pages/VuexPage';
 import Login from '../pages/Login';
+import List from '../pages/List';
 
 Vue.use(Router)
 
@@ -16,23 +17,27 @@ export default new Router({
       component: Home
     },
     {
-      path:'/form',
-      name:'Form',
-      component:Form
+      path: '/form',
+      name: 'Form',
+      component: Form
     },
     {
-      path:'/echarts',
-      name:'Echarts',
-      component:Echarts
+      path: '/echarts',
+      name: 'Echarts',
+      component: Echarts
     },
     {
-      path:'/vuexpage',
-      name:'VuexPage',
-      component:VuexPage
-    },{
-      path:'/login',
-      name:'Login',
-      component:Login
+      path: '/vuexpage',
+      name: 'VuexPage',
+      component: VuexPage
+    }, {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    }, {
+      path:'/list',
+      name:'List',
+      component:List
     }
   ]
 })
