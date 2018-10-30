@@ -19,6 +19,10 @@ import store from './store/index';
 import moment from 'moment';
 Vue.prototype.$moment=moment;
 
+// 导入自定义插件
+import sky from './plugs/sky';
+Vue.prototype.$sky=sky;
+
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 
