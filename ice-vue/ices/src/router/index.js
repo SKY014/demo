@@ -6,6 +6,7 @@ import Echarts from '../pages/Echarts';
 import VuexPage from '../pages/VuexPage';
 import Login from '../pages/Login';
 import List from '../pages/List';
+import Register from '../pages/Register';
 
 Vue.use(Router)
 
@@ -38,6 +39,10 @@ export default new Router({
       path:'/list',
       name:'List',
       component:List
+    },{
+      path:'/register',
+      name:'Register',
+      component:Register
     }
   ]
 })

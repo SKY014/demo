@@ -1,24 +1,23 @@
 <template>
-  <div class="login">
+  <div class="register">
     <div class="container">
-      <h2>登录页面</h2>
+      <h2>注册页面</h2>
       <el-form :model="formData">
         <el-input v-model="formData.name" size="mini" placeholder="请输入用户名"></el-input><br><br>
         <el-input v-model="formData.password" size="mini" placeholder="请输入密码"></el-input><br><br>
+        <el-input placeholder="请确认密码" size="mini"></el-input>
         <div>
-          <router-link to="/register">没有账号，注册用户</router-link>
+          <router-link to="/login">去登录</router-link>
         </div>
-        <el-button @click="submitForm">登录</el-button>
+        <el-button @click="submitForm">注册</el-button>
       </el-form>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
-  name:'login',
+  name:'Register',
   data(){
     return{
       formData:{
@@ -27,23 +26,11 @@ export default {
       }
     }
   },
-  methods:{
-    // 提交表单登录
-    submitForm(){
-      console.log(this.formData);
-      // axios.post('http://192.168.0.107:3000/login',this.formData,(res)=>{
-      //   console.log('登录');
-      // })
-      this.$router.push('/')
-    }
-
-    
-  }
 }
 </script>
 
 <style lang="scss" scoped>
-.login{
+.register{
   .container{
     margin: 0 auto;
     width: 350px;
